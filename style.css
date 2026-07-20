@@ -1,0 +1,598 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: #09090B;
+    color: #FFFFFF;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: #FFFFFF;
+    transition: color 0.3s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+h1, h2, h3, h4 {
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: #C084FC;
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #7C3AED, #A855F7);
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+}
+
+p {
+    color: #D1D5DB;
+    margin-bottom: 1rem;
+}
+
+
+header {
+    background-color: rgba(24, 24, 27, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #7C3AED;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+a.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+}
+
+a.logo span {
+    color: #A855F7;
+}
+
+.navLinks {
+    display: flex;
+    gap: 2rem;
+}
+
+.navLinks a {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.navLinks a:hover,
+.navLinks a.active {
+    color: #C084FC;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    border: none;
+}
+
+.btnPrimary {
+    background: linear-gradient(135deg, #7C3AED, #A855F7);
+    color: #FFFFFF;
+    box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3);
+}
+
+.btnPrimary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(124, 58, 237, 0.5);
+    background: linear-gradient(135deg, #A855F7, #7C3AED);
+}
+
+.btnSecondary {
+    background-color: transparent;
+    color: #FFFFFF;
+    border: 2px solid #7C3AED;
+}
+
+.btnSecondary:hover {
+    background-color: #18181B;
+    border-color: #A855F7;
+    color: #C084FC;
+    transform: translateY(-3px);
+}
+
+
+section {
+    padding: 5rem 5%;
+}
+
+.grid2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    align-items: center;
+}
+.grid2 > * {
+    flex: 1 1 400px;
+    max-width: 100%;
+}
+
+.grid3 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.grid3 > * {
+    flex: 1 1 300px;
+    max-width: 100%;
+}
+
+.grid4 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.grid4 > * {
+    flex: 1 1 250px;
+    max-width: 100%;
+}
+
+.card {
+    background-color: #18181B;
+    border-radius: 16px;
+    padding: 2rem;
+    border: 1px solid rgba(124, 58, 237, 0.2);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: #7C3AED;
+    box-shadow: 0 10px 30px rgba(124, 58, 237, 0.15);
+}
+
+.icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+
+.gameCard {
+    background-color: #18181B;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(124, 58, 237, 0.2);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.gameCard:hover {
+    transform: translateY(-10px);
+    border-color: #A855F7;
+    box-shadow: 0 10px 30px rgba(124, 58, 237, 0.2);
+}
+
+.gameCard img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-bottom: 2px solid #7C3AED;
+}
+
+.gameInfo {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.tagContainer {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background-color: rgba(124, 58, 237, 0.15);
+    color: #C084FC;
+    padding: 0.2rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border: 1px solid rgba(124, 58, 237, 0.3);
+}
+
+.rating {
+    color: #FBBF24;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.gameInfo .btn {
+    margin-top: auto;
+    width: 100%;
+}
+
+
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(rgba(9, 9, 11, 0.8), rgba(9, 9, 11, 0.95)), url('https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80&w=2070') center/cover no-repeat;
+    text-align: center;
+    padding: 0 5%;
+}
+
+.heroContent {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.heroButtons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+
+.spotlightContent {
+    background-color: #18181B;
+    padding: 3rem;
+    border-radius: 16px;
+    border-left: 4px solid #7C3AED;
+}
+
+
+.newsletter {
+    background: linear-gradient(135deg, #18181B 0%, #09090B 100%);
+    text-align: center;
+    border-top: 1px solid #7C3AED;
+    border-bottom: 1px solid #7C3AED;
+}
+
+.newsletterForm {
+    display: flex;
+    max-width: 600px;
+    margin: 2rem auto 0;
+    gap: 1rem;
+}
+
+.newsletterForm input {
+    flex-grow: 1;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid rgba(124, 58, 237, 0.5);
+    background-color: #09090B;
+    color: #FFFFFF;
+    font-family: inherit;
+}
+
+.newsletterForm input:focus {
+    outline: none;
+    border-color: #A855F7;
+    box-shadow: 0 0 10px rgba(124, 58, 237, 0.3);
+}
+
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contactForm input,
+.contactForm textarea {
+    width: 100%;
+    padding: 1rem;
+    background-color: #09090B;
+    border: 1px solid rgba(124, 58, 237, 0.3);
+    border-radius: 8px;
+    color: #FFFFFF;
+    font-family: inherit;
+    transition: all 0.3s ease;
+}
+
+.contactForm textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.contactForm input:focus,
+.contactForm textarea:focus {
+    outline: none;
+    border-color: #C084FC;
+    box-shadow: 0 0 10px rgba(192, 132, 252, 0.2);
+}
+
+.contactInfo {
+    padding: 2rem;
+    background-color: #18181B;
+    border-radius: 16px;
+    border: 1px solid #7C3AED;
+}
+
+.contactInfo p {
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.mapPlaceholder {
+    width: 100%;
+    height: 300px;
+    background-color: #09090B;
+    border: 1px solid rgba(124, 58, 237, 0.3);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #C084FC;
+    margin-top: 2rem;
+}
+
+
+footer {
+    background-color: #18181B;
+    padding: 4rem 5% 2rem;
+    border-top: 2px solid #7C3AED;
+}
+
+.footerContent {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.footerContent > * {
+    flex: 1 1 200px;
+    max-width: 100%;
+}
+
+.footerSection h4 {
+    color: #C084FC;
+    margin-bottom: 1.5rem;
+}
+
+.footerSection ul li {
+    margin-bottom: 0.8rem;
+}
+
+.footerSection ul li a:hover {
+    color: #A855F7;
+    padding-left: 5px;
+}
+
+.footerBottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(124, 58, 237, 0.2);
+    color: #D1D5DB;
+}
+
+
+@media (max-width: 1024px) {
+    h1 { font-size: 3rem; }
+    h2 { font-size: 2.2rem; }
+    section { padding: 4rem 5%; }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    .navLinks {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+    h1 { font-size: 2.5rem; }
+    .heroButtons {
+        flex-direction: column;
+    }
+    
+
+    .grid2 > *, .grid3 > *, .grid4 > *, .gamesGrid > * {
+        flex: 1 1 100%;
+    }
+    
+    .newsletterForm {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.8rem; }
+    section { padding: 3rem 5%; }
+}
+
+
+.pageTitle {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.pageTitle span {
+    color: #A855F7;
+}
+
+.gamesGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.gamesGrid > * {
+    flex: 1 1 260px;
+    max-width: 100%;
+}
+
+.gameImage {
+    width: 100%;
+    aspect-ratio: 460 / 215;
+    object-fit: cover;
+    display: block;
+    border-bottom: 2px solid #7C3AED;
+}
+
+.gameTitle {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    color: #FFFFFF;
+}
+
+.gameGenre {
+    color: #C084FC;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.gameYear {
+    margin-top: auto;
+    align-self: flex-start;
+    background-color: #7C3AED;
+    color: #FFFFFF;
+    padding: 0.25rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+
+.newsFeed {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.newsArticle {
+    background-color: #18181B;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(124, 58, 237, 0.2);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.newsArticle:hover {
+    border-color: #7C3AED;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(124, 58, 237, 0.15);
+}
+
+.newsImage {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.newsContent {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.newsDate {
+    color: #C084FC;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.newsTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #FFFFFF;
+}
+
+.newsExcerpt {
+    color: #D1D5DB;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+
+@media (min-width: 768px) {
+    .newsArticle {
+        flex-direction: row;
+    }
+    .newsImage {
+        width: 40%;
+        height: 100%;
+    }
+    .newsContent {
+        width: 60%;
+    }
+}
+
+.gameDescription {
+    color: #D1D5DB;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
